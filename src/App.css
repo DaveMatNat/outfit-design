@@ -1,0 +1,230 @@
+/* App.css */
+#root {
+  background-color: var(--color-background);
+}
+
+h1 {
+  margin: 0;
+  color: var(--color-text);
+  font-family: var(--font-primary);
+  font-size: 2.8rem;
+  line-height: 1;
+}
+
+h2 {
+  color: var(--color-textSecondary);
+  font-family: var(--font-secondary);
+  font-size: 1.1rem;
+  margin: 0.4rem 0;
+}
+
+.App {
+  text-align: center;
+  background: var(--color-background);
+  height: 100vh;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  overflow: hidden;
+}
+
+.random-btn {
+  background: var(--color-primary);
+  color: var(--color-surface);
+  padding: 0.6rem 1.4rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 2rem;
+  cursor: pointer;
+  margin: 0.75rem 0;
+  transition: all var(--transition-medium);
+  font-family: var(--font-secondary);
+  font-weight: 600;
+  box-shadow: var(--shadow-boxShadow);
+}
+
+.random-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none !important;
+}
+
+.random-btn:hover:not(:disabled) {
+  background: var(--color-primaryHover);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-boxShadowHover);
+}
+
+.avatar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  flex: 1;
+  justify-content: center;
+  max-height: 75vh;
+  min-height: 0;
+}
+
+.layer {
+  position: relative;
+}
+
+/* Clothes IMG*/
+
+.clothes {
+  scale: 1.8;
+  object-fit: contain;
+  filter: var(--shadow-dropShadow);
+  transition: opacity var(--transition-layer), filter var(--transition-layer);
+  opacity: 1;
+}
+
+.clothes.transitioning {
+  opacity: 0;
+}
+
+.hats {
+  max-height: 4rem;
+  z-index: 5;
+}
+
+.shirts {
+  max-height: 7.5rem;
+  z-index: 4;
+}
+
+.pants {
+  max-height: 7.5rem;
+  z-index: 3;
+}
+
+.shoes {
+  max-height: 5rem;
+  z-index: 2;
+}
+
+/* Clothes */
+.nav-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  z-index: 999;
+  margin-top: 0.5rem;
+}
+
+.nav-buttons button {
+  background-color: var(--color-buttonBg);
+  color: var(--color-surface);
+  border: none;
+  border-radius: 4px;
+  padding: 0.4rem 0.8rem;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  font-family: var(--font-secondary);
+  box-shadow: var(--shadow-boxShadow);
+  font-size: 0.9rem;
+}
+
+.nav-buttons button:hover {
+  background-color: var(--color-buttonHover);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-boxShadowHover);
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-height: 800px) {
+  .App {
+    padding: 0.5rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 0.9rem;
+  }
+
+  .avatar {
+    gap: 1rem;
+    max-height: 55vh;
+  }
+
+  .clothes {
+    scale: 1;
+  }
+
+  .hats {
+    max-height: 2.5rem;
+  }
+
+  .shirts {
+    max-height: 5rem;
+  }
+
+  .pants {
+    max-height: 5rem;
+  }
+
+  .shoes {
+    max-height: 3rem;
+  }
+}
+
+@media (max-height: 600px) {
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  h2 {
+    font-size: 0.8rem;
+    margin: 0.25rem 0;
+  }
+
+  .random-btn {
+    padding: 0.4rem 1rem;
+    font-size: 0.8rem;
+    margin: 0.5rem 0;
+  }
+
+  .avatar {
+    gap: 0.5rem;
+    max-height: 50vh;
+  }
+
+  .clothes {
+    scale: 0.8;
+  }
+
+  .hats {
+    max-height: 2rem;
+  }
+
+  .shirts {
+    max-height: 4rem;
+  }
+
+  .pants {
+    max-height: 4rem;
+  }
+
+  .shoes {
+    max-height: 2.5rem;
+  }
+
+  .nav-buttons button {
+    padding: 0.2rem 0.4rem;
+    font-size: 0.7rem;
+  }
+}
+
+/* Mobile-specific adjustments */
+@media (max-width: 390px) {
+  .nav-buttons {
+    gap: 10rem !important;
+    padding: 10px !important; /* Temporary debug padding */
+  }
+}

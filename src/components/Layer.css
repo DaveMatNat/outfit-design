@@ -1,0 +1,10 @@
+.layer {
+    display: flex;
+    flex-direction: column;
+    gap: -5rem;
+}
+
+.nav-buttons {
+    display: flex;
+    gap: 20rem;
+}

@@ -1,0 +1,6 @@
+{
+    "hats":["none.png","hat1.png","hat2.png", "hat3.png"],
+    "shirts":["shirt1.png","shirt2.png","shirt3.png", "shirt4.png","shirt5.png","shirt6.png","shirt7.png"],
+    "pants":["pants1.png","pants2.png","pants3.png","pants4.png","pants5.png"],
+    "shoes":["shoes1.png","shoes2.png","shoes3.png"]
+}

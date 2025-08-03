@@ -1,0 +1,106 @@
+:root {
+  /* Default theme variables - will be overridden by ThemeContext */
+
+  /* Deals with Dragging and Highlighting Content */
+  user-select: none;
+  -webkit-user-drag: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+
+  --font-primary: "Bodoni Moda", serif;
+  --font-secondary: "Inter", sans-serif;
+  --color-background: hsl(0 0% 95%);
+  --color-surface: #ffffff;
+  --color-text: #1a1a1a;
+  --color-textSecondary: #666666;
+  --color-primary: #00b894;
+  --color-primaryHover: #019875;
+  --color-buttonBg: #2d3436;
+  --color-buttonHover: #636e72;
+  --color-accent: #646cff;
+  --color-accentHover: #535bf2;
+  --shadow-dropShadow: drop-shadow(10px 10px 15px rgba(0, 0, 0, 0.4));
+  --shadow-boxShadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  --shadow-boxShadowHover: 0 6px 20px rgba(0, 0, 0, 0.2);
+  --transition-fast: 0.1s ease-in-out;
+  --transition-medium: 0.4s ease-in-out;
+  --transition-slow: 0.6s ease-in-out;
+  --transition-layer: 0.3s ease-in-out;
+
+  font-family: var(--font-primary);
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: var(--color-text);
+  background-color: var(--color-background);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: var(--color-accent);
+  text-decoration: inherit;
+}
+
+a:hover {
+  color: var(--color-accentHover);
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  justify-content: center;
+  min-width: 320px;
+  min-height: 100vh;
+  padding: 0;
+  background-color: var(--color-background);
+}
+
+h1 {
+  font-size: 3.2em;
+  font-weight: 700;
+  font-style: italic;
+  -webkit-text-stroke-width: 0.1rem; 
+  -webkit-text-stroke-color: var(--color-text);
+  text-shadow: 0 0 3rem var(--color-accent);
+  line-height: 1.1;
+  color: var(--color-text);
+  font-family: var(--font-primary);
+}
+
+h2 {
+  color: var(--color-textSecondary);
+  font-family: var(--font-secondary);
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: var(--font-secondary);
+  background-color: var(--color-buttonBg);
+  color: var(--color-surface);
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+button:hover {
+  background-color: var(--color-buttonHover);
+  transform: translateY(-2px);
+}
+
+button:focus,
+button:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
